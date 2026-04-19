@@ -3,19 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Jace 的前端工程師學習之路｜作品集與技術分享</title>
+  
+  <meta name="description" content="這是 Jace 的個人前端工程師學習網站，分享學習紀錄、Side Project 與實作心得，持續精進 HTML、CSS 與 JavaScript 技術。" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; max-width: 100%; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif; line-height: 1.6; }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { width: 1920px; margin: 0 auto; padding: 16px; }
-    nav a { margin-right: 12px; text-decoration: none; }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ✅ 改為自適應寬度 */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    nav a {
+      margin-right: 12px;
+      text-decoration: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+
     .col-12 { grid-column: span 12; }
-    @media (min-width: 768px) { .col-md-6 { grid-column: span 6; } }
-    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+
+    @media (min-width: 768px) {
+      .col-md-6 { grid-column: span 6; }
+    }
+
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px;
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
   </style>
 </head>
+
 <body>
   <header class="container" role="banner">
     <nav aria-label="主選單">
@@ -24,14 +72,22 @@
       <a href="https://example.com/blog">技術部落格</a>
       <a href="mailto:me@example.com">聯絡我</a>
     </nav>
-    <h1>你好，我是Jace：前端工程師新手之路</h1>
-    <h1>你好，我是客家鬍渣貓：前端工程師新手之路</h1>
+
+    <!-- ✅ 只保留一個 h1 -->
+    <h1>你好，我是 Jace：前端工程師新手之路</h1>
+
     <p>歡迎來到我的個人網站！這裡整理了學習紀錄、Side Project 與實作心得。</p>
   </header>
 
   <footer class="container" role="contentinfo">
-    <p>© 2025 My Portfolio · <a href="#">GitHub</a></p>
-    <img src="https://source.unsplash.com/600x200/?technology,abstract" alt="">
+    <p>© 2025 My Portfolio · 
+      <a href="https://github.com/your-account">GitHub</a>
+    </p>
+
+    <!-- ✅ alt 不可為空 -->
+    <img 
+      src="https://source.unsplash.com/600x200/?technology,abstract" 
+      alt="抽象科技風格背景圖片">
   </footer>
 </body>
 </html>
